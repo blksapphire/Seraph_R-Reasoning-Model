@@ -1,0 +1,12 @@
+pandas
+numpy
+tensorflow
+scikit-learn
+MetaTrader5
+dash
+plotly
+backtesting
+transformers
+torch
+requests
+newsapi-python
