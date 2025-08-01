@@ -1,0 +1,57 @@
+{
+    "system_identity": {
+        "name": "Seraph-R",
+        "version": "2.0-reasoning"
+    },
+    "mt5_credentials": {
+        "login": 12345678,
+        "password": "YOUR_MT5_PASSWORD",
+        "server": "YourBroker-Server"
+    },
+    "trading_parameters": {
+        "symbols_to_trade": ["EURUSD", "GBPJPY", "XAUUSD", "USDJPY", "CHFJPY"],
+        "timeframe": "TIMEFRAME_H1"
+    },
+    "dynamic_risk_management": {
+        "use_atr_for_sl_tp": true,
+        "atr_period": 14,
+        "sl_atr_multiplier": 1.5,
+        "tp_atr_multiplier": 3.0
+    },
+    "strategy_weights": {
+        "technical": 0.4,
+        "structural": 0.4,
+        "fundamental": 0.2
+    },
+    "evaluator_settings": {
+        "evaluation_period_trades": 25,
+        "learning_rate": 0.1,
+        "journal_file": "trade_journal.jsonl"
+    },
+    "structural_parameters": {
+        "swing_point_lookback": 20,
+        "bos_choch_threshold_atr": 1.5
+    },
+    "fundamental_parameters": {
+        "news_api_key": "YOUR_NEWSAPI_KEY",
+        "currencies_of_interest": ["USD", "EUR", "GBP", "JPY", "CHF"],
+        "news_sentiment_model": "ProsusAI/finbert"
+    },
+    "model_architecture": {
+        "model_folder": "models",
+        "lookback_period": 60
+    },
+    "training_settings": {
+        "epochs": 75,
+        "batch_size": 32,
+        "historical_data_bars": 20000
+    },
+    "dashboard": {
+        "host": "127.0.0.1",
+        "port": 8050
+    },
+    "system_files": {
+        "log_file": "seraph_activity.log",
+        "status_file": "seraph_status.json"
+    }
+}
